@@ -27,11 +27,12 @@ class TcpCheckTool:
                     dic[t[6]] = 1
                 #print t[3], t[4], t[5], t[6]
         sort_dic = sorted(dic.items(),key=operator.itemgetter(1),reverse=True)
-        print sort_dic
+        #print sort_dic
+        print "pid","laddr","raddr","status"
         for item_dic in sort_dic:
             for item_l in l:
                 if item_l[0] == item_dic[0]:
-                    print '\"'+str(item_l[0])+'\"'+item_l[1]+'\"'+item_l[2]+'\"'+item_l[3]
+                    print '\"'+str(item_l[0])+'\"'+',\"'+item_l[1]+'\"'+',\"'+item_l[2]+'\"'+',\"'+item_l[3]+'\"'
 
 
 
