@@ -7,8 +7,8 @@ import os
 
 class TcpCheckTool:
     def check(self):
-        # p = psutil.Process(os.getpid())
-        # nametuple = p.connections(kind = 'tcp')
+    # p = psutil.Process(os.getpid())
+    # nametuple = p.connections(kind = 'tcp')
         nametuple = psutil.net_connections(kind = 'tcp')
         # print type(nametuple)
         # print nametuple
@@ -33,6 +33,7 @@ class TcpCheckTool:
             for item_l in l:
                 if item_l[0] == item_dic[0]:
                     print '\"'+str(item_l[0])+'\"'+',\"'+item_l[1]+'\"'+',\"'+item_l[2]+'\"'+',\"'+item_l[3]+'\"'
+
 
 
 
